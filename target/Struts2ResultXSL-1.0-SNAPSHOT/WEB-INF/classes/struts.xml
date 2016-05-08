@@ -1,0 +1,31 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: joselopezruiz -->
+ 
+<struts>
+    <!-- Add your configuration elements here -->
+    <constant name="devMode" value="true" />
+    <constant name="struts.configuration.xml.reload" value="true" />
+    <package name="default" extends="struts-default">
+        <action name="XSLAction" class="es.munvi.struts2resultxsl.XSLAction">
+            <result type="xslt" name="success">
+                <param name="stylesheetLocation">/style.xsl</param>
+                <param name="matchingPattern">^/result/[^/*]$</param>
+            </result>
+            <result name="input">/index.jsp</result>
+        </action>
+        <action name="biblioteca" class="es.munvi.struts2resultxsl.XSLAction">
+            <result type="xslt" name="success">
+                <param name="stylesheetLocation">/biblioteca.xsl</param>
+                <param name="exposedValue">libros</param>
+                <param name="matchingPattern">^/result/[^/*]$</param>
+            </result>
+            <result name="input">/index.jsp</result>
+        </action>
+        <action name="libros">
+            <result name="success">/libros.xml</result>
+        </action>
+    </package>
+</struts>

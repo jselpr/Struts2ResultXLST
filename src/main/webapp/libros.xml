@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="libros.xsl"?>
+<libros>
+  <libro>
+    <titulo>Fuente Ovejuna</titulo>
+    <autor>Lope de Vega</autor>
+    <isbn>84-9815-002-7</isbn>
+  </libro>
+  <libro>
+    <titulo>La Celestina</titulo>
+    <autor>Fernando de Rojas</autor>
+    <isbn>84-96390-96-9</isbn>
+  </libro>
+ 
+</libros>
